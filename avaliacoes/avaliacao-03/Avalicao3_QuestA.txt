@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <conio.h>
+
+int main(void) {
+	int a,b,c,delta;
+	float x1,x2;
+	
+	printf("\nInforme A: ");
+    scanf("%d",&a);
+    printf("\nInforme B: ");
+    scanf("%d",&b);
+    printf("\nInforme C: ");
+    scanf("%d",&c);
+
+    delta = pow(b,2) - 4 * a * c;
+    printf("\n\nO VALOR DE DELTA E = %d\n",delta);
+	
+	if(delta >=0){
+		x1 = (-b + sqrt(delta))/(2.*a); 
+ 		x2 = (-b - sqrt(delta))/(2.*a);
+		
+ 		printf("As raizes reais sao:\n\n => 1a.raiz %.1f \n => 2a.raiz %.1f\n", x1, x2);
+	
+	}else{
+		printf("Raizes Imaginarias");	
+	}
+   	
+	return 0;
+}
