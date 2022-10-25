@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int invert_string(char vetor[]){
+	char vt_invert[10], *p;
+    int x, tam = 0;
+
+    tam = strlen(vetor);
+    p = vetor + tam - 2;
+
+    for(x = 0; x < tam; x++){
+        vt_invert[x] = *p;
+        p--;
+    }
+
+    for(x = 0; x < tam; x++){
+        printf("%c", vt_invert[x]);
+    }
+
+}
+
+int main(){
+    char v[10];
+
+    fgets(v, 10, stdin);
+
+    invert_string(v);
+	
+	return 0;
+}
